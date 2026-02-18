@@ -1,5 +1,10 @@
 fastapi
 uvicorn
-requests
 replicate
+transformers
+torch
+pillow
+accelerate
+requests
 python-multipart
+
