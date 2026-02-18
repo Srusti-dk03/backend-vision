@@ -6,6 +6,10 @@ import torch
 import tempfile
 
 app = FastAPI()
+@app.get("/healthz")
+def health():
+    return {"status": "ok"}
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -40,5 +44,6 @@ async def ask_image(
     answer = processor.decode(out[0], skip_special_tokens=True)
 
     return {"answer": answer}
+
 
 
